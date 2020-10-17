@@ -10,12 +10,12 @@ using UnityEngine;
     public static int j = 0;
     public static int Respuesta = 0;
 
-    static int [] respuestaEliminada;
+   // static int [] respuestaEliminada;
 
 
     public static int Election()
         {
-        respuestaEliminada = new int[3] { 0, 0, 0 };
+       // respuestaEliminada = new int[3] { 0, 0, 0 };
 
         var positionX = Input.mousePosition.x;
         var positionY = Input.mousePosition.y;
