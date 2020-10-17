@@ -64,7 +64,7 @@ using UnityEngine;
         {
             if (respuestaEliminada[i] != 0)
             respuestaEliminada[i] = Respuesta;
-
+hola como estan
         }*/
 
 
