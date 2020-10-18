@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - Circulo
     - Juego
     - Preg
     - Resp
@@ -48,13 +49,15 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11784}
+      Script: {instanceID: 11786}
     - Class: 114
-      Script: {instanceID: 13474}
+      Script: {instanceID: 13476}
     - Class: 114
-      Script: {instanceID: 13610}
+      Script: {instanceID: 13612}
     - Class: 114
-      Script: {instanceID: 13690}
+      Script: {instanceID: 13692}
+    - Class: 114
+      Script: {instanceID: 14330}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -202,7 +205,7 @@ ScriptsOnlyBuild:
     className: PhysicsRaycaster
   - hash:
       serializedVersion: 2
-      Hash: c0ceaea0b9170db4725143feb0c05694
+      Hash: 85a63da6c89ed58e135d913a19b2c60d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Juego
@@ -560,6 +563,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Slider
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Circulo
   - hash:
       serializedVersion: 2
       Hash: 0fd6822f6177297bd0eb4d83cc7a9030
