@@ -19,7 +19,7 @@ using UnityEngine;
 
         var positionX = Input.mousePosition.x;
         var positionY = Input.mousePosition.y;
-
+/*
             //elige una opcion con los numero las letras o el mouse
             if (Input.GetKeyDown("1")||Input.GetKeyDown("a")|| Input.GetMouseButtonDown(0)&& positionX>Screen.width/2 && positionX<Screen.width-Screen.width/4&&positionY>Screen.height*.75)
             Respuesta= 1;
@@ -28,7 +28,7 @@ using UnityEngine;
             if (Input.GetKeyDown("3")|| Input.GetKeyDown("c") || Input.GetMouseButtonDown(0) && positionX > Screen.width / 2 && positionX < Screen.width - Screen.width / 4 && positionY<Screen.height*.75&&positionY>Screen.height*.63)
             Respuesta= 3;
             if (Input.GetKeyDown("4")|| Input.GetKeyDown("d") || Input.GetMouseButtonDown(0) && positionX > Screen.width - Screen.width / 4 && positionX < Screen.width && positionY < Screen.height * .75 && positionY > Screen.height*.63)
-            Respuesta= 4;
+            Respuesta= 4;*/
 
 
             //elige una opcion de acuerdo al angulo del circulo
@@ -38,7 +38,7 @@ using UnityEngine;
             Respuesta= 2;
         if (Input.GetMouseButtonDown(0) && positionX > Screen.width / 2 && positionY < Screen.height * .4 && (Circulo.z > -180 && Circulo.z < -90))
             Respuesta= 3;
-        if (Input.GetMouseButtonDown(0) && positionX > Screen.width / 2 && positionY < Screen.height * .4 && (Circulo.z < 0 && Circulo.z > -90))
+        if (Input.GetMouseButtonDown(0) && positionX > Screen.width / 2 && positionY < Screen.height * .4 && (Circulo.z < 0 && Circulo.z > -90)) 
             Respuesta= 4;
 
 
