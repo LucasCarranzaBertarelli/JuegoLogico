@@ -7,8 +7,4 @@ using UnityEngine;
     {
         public int nivel;
         public int respuesta;
-        public int eliminar1;
-        public int eliminar2;
-        public int eliminar3;
-
     }

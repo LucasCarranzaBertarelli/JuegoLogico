@@ -26,34 +26,26 @@ public class Juego : MonoBehaviour
             {
                 nivel = 1,
                 respuesta = 2,
-                eliminar1 = 1,
-                eliminar2 = 3,
-                eliminar3 = 4,
+             
     };
             var Level2 = new Level
             {
                 nivel = 2,
                 respuesta = 4,
-                eliminar1 = 3,
-                eliminar2 = 1,
-                eliminar3 = 2,
+               
             };
         var Level3 = new Level
         {
             nivel = 3,
             respuesta = 3,
-            eliminar1 = 1,
-            eliminar2 = 4,
-            eliminar3 = 2,
+         
         };
         var Level4 = new Level
 
         {
             nivel = 4,
             respuesta = 1,
-            eliminar1 = 3,
-            eliminar2 = 4,
-            eliminar3 = 2,
+         
         };
         arrayLevel[0] = Level1;
         arrayLevel[1] = Level2;

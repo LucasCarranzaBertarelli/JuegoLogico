@@ -33,7 +33,12 @@ public class Preg : MonoBehaviour
         if (Juego.pregCorrecta == true)
         {
             //transforma la Respuesta de Eleccion en 0, esto para que no se apriete solo la respuesta del el proximo nivel
-            Eleccion.Respuesta = 0;
+            //Eleccion.Respuesta = 0;
+            Eleccion.respuestaEliminada[0] = 0;
+            Eleccion.respuestaEliminada[1] = 0;
+            Eleccion.respuestaEliminada[2] = 0;
+            Eleccion.respuestaEliminada[3] = 0;
+
 
             //Apaga los graficos del nivel que pase
             TodasLasPreguntas[Juego.nivel - 2].GetComponent<SpriteRenderer>().forceRenderingOff = true;
