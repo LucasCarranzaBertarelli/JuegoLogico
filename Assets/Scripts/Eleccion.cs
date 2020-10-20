@@ -47,7 +47,7 @@ public static class Eleccion
 
 
 
-        //Elimina una opcion cuando uno pide ayuda chequeando que no se haya elegido esa respuesta antes.
+        //Elimina una opcion con tiempo o help cuando uno pide ayuda chequeando que no se haya elegido esa respuesta antes.
         if ((int)Tiempo.tiempoRespuesta == 30 || Input.GetKeyDown("h") || Input.GetMouseButtonDown(0) && positionX > Screen.width / 2 && positionY < Screen.height * .55 && positionY > Screen.height * .4)
         {
             for (int i = 0; i < 4; i++)
@@ -65,7 +65,7 @@ public static class Eleccion
                             if (respuestaErronea == respuestaEliminada[j])
                                 break;
 
-                            if (respuestaErronea != Juego.arrayLevel[i].respuesta&& respuestaEliminada[j]==0)
+                            if (respuestaErronea != Juego.arrayLevel[i].respuesta && respuestaEliminada[j]==0)
                             {
                                 Respuesta = respuestaErronea;
                                 funciono = true;
