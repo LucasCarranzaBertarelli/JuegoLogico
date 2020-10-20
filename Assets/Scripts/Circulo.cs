@@ -19,15 +19,15 @@ public class Circulo : MonoBehaviour
         if (x < Screen.width / 2 && y < Screen.height * .4 && y > Screen.height * .2)
         {
             if (x > xViejo && y < 389 || x < xViejo && y > 389)
-                z = z + 2.5f;
+                z = z + 1.5f;
             if (x < xViejo && y < 389 || x > xViejo && y > 389)
-                z = z - 2.5f;
+                z = z - 1.5f;
 
 
             if (y > yViejo && x > 175 || y < yViejo && x < 175)
-                z = z + 2.5f;
+                z = z + 1.5f;
             if (y < yViejo && x > 175 || y > yViejo && x < 175)
-                z = z - 2.5f;
+                z = z - 1.5f;
 
             transform.rotation = Quaternion.Euler(0, 0, z);
 

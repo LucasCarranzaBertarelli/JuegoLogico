@@ -36,13 +36,13 @@ public static class Eleccion
 
 
         //elige una opcion de acuerdo al angulo del circulo
-        if (Input.GetMouseButtonDown(0) && positionX > Screen.width / 2 && positionY < Screen.height * .4 && (Circulo.z > 0 && Circulo.z < 90))
+        if (Input.GetMouseButtonDown(0) && positionX > Screen.width / 2 && positionY < Screen.height * .4 && ((Circulo.z > 0 && Circulo.z < 90)||(Circulo.z>-360&&Circulo.z<-270)))
             Respuesta = 1;
-        if (Input.GetMouseButtonDown(0) && positionX > Screen.width / 2 && positionY < Screen.height * .4 && (Circulo.z > 90 && Circulo.z < 180))
+        if (Input.GetMouseButtonDown(0) && positionX > Screen.width / 2 && positionY < Screen.height * .4 && ((Circulo.z > 90 && Circulo.z < 180) || (Circulo.z > -270 && Circulo.z < -180)))
             Respuesta = 2;
-        if (Input.GetMouseButtonDown(0) && positionX > Screen.width / 2 && positionY < Screen.height * .4 && (Circulo.z > -180 && Circulo.z < -90))
+        if (Input.GetMouseButtonDown(0) && positionX > Screen.width / 2 && positionY < Screen.height * .4 && ((Circulo.z > -180 && Circulo.z < -90) || (Circulo.z < 270 && Circulo.z > 180)))
             Respuesta = 3;
-        if (Input.GetMouseButtonDown(0) && positionX > Screen.width / 2 && positionY < Screen.height * .4 && (Circulo.z < 0 && Circulo.z > -90))
+        if (Input.GetMouseButtonDown(0) && positionX > Screen.width / 2 && positionY < Screen.height * .4 && ((Circulo.z < 0 && Circulo.z > -90) || (Circulo.z < 360 && Circulo.z > 270)))
             Respuesta = 4;
 
 
