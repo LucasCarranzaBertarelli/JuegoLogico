@@ -31,8 +31,8 @@ public class Circulo : MonoBehaviour
 
             transform.rotation = Quaternion.Euler(0, 0, z);
 
-            if (z > 180) z = 0;
-            if (z < -180) z = 0;
+            if (z > 360) z = 0;
+            if (z < -360) z = 0;
 
             xViejo = x;
             yViejo = y;
