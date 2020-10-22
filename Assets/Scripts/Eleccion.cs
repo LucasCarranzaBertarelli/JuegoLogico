@@ -62,6 +62,7 @@ public static class Eleccion
 
                         for (j = 0; j <= 3; j++)
                         {
+
                             if (respuestaErronea == respuestaEliminada[j])
                                 break;
 
@@ -70,10 +71,10 @@ public static class Eleccion
                                 Respuesta = respuestaErronea;
                                 funciono = true;
                                 break;
-                            }
-                            if (j == 3)
-                                funciono = true;
+                            }                     
                         }
+                        if (respuestaEliminada[2] != 0)
+                        funciono = true;
                     }
                 }
             }
