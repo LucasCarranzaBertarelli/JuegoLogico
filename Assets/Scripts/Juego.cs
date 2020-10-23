@@ -18,6 +18,8 @@ public class Juego : MonoBehaviour
        public static Level[] arrayLevel;
        public static int eliminar;
 
+       public static int inicio = 0; 
+
         // Start is called before the first frame update
         void Start()
         {
@@ -57,6 +59,8 @@ public class Juego : MonoBehaviour
     // Update is called once per frame
     void Update()
         {
+       
+
 
         //elije la respuesta
             respuesta = Eleccion.Election();

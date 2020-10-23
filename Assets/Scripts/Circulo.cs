@@ -16,6 +16,11 @@ public class Circulo : MonoBehaviour
         double x = Input.mousePosition.x;
         double y = Input.mousePosition.y;
 
+        //apaga el circulo durante el inicio
+        if (Juego.inicio < 1) GetComponent<SpriteRenderer>().forceRenderingOff = true;
+        else GetComponent<SpriteRenderer>().forceRenderingOff = false;
+
+
 
         //gira la rueda en funcion del mouse
         if (x < Screen.width / 2 && y < Screen.height * .4 && y > Screen.height * .2)

@@ -34,6 +34,11 @@ public static class Eleccion
                     if (Input.GetKeyDown("4")|| Input.GetKeyDown("d") || Input.GetMouseButtonDown(0) && positionX > Screen.width - Screen.width / 4 && positionX < Screen.width && positionY < Screen.height * .75 && positionY > Screen.height*.63)
                     Respuesta= 4;*/
 
+        
+        //elije opciones en inicio
+        if (Input.GetMouseButtonDown(0) && positionX > Screen.width * .6 && positionX < Screen.width * .8 && positionY > Screen.height * .55 && positionY < Screen.height * .65)
+            Juego.inicio = 1;
+
 
         //elige una opcion de acuerdo al angulo del circulo
         if (Input.GetMouseButtonDown(0) && positionX > Screen.width / 2 && positionY < Screen.height * .4 && ((Circulo.z > 0 && Circulo.z < 90)||(Circulo.z>-360&&Circulo.z<-270)))
@@ -44,6 +49,9 @@ public static class Eleccion
             Respuesta = 3;
         if (Input.GetMouseButtonDown(0) && positionX > Screen.width / 2 && positionY < Screen.height * .4 && ((Circulo.z < 0 && Circulo.z > -90) || (Circulo.z < 360 && Circulo.z > 270)))
             Respuesta = 4;
+
+
+        
 
 
 
@@ -89,6 +97,9 @@ public static class Eleccion
                 break;
             }
         }
+        //se asegura que la no haya respuesta mientras estamos en inicio
+        if (Juego.inicio == 0) Respuesta = 0;
+
         return Respuesta;
         }
     }

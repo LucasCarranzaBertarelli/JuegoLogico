@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Preg : MonoBehaviour
 {
-    public GameObject Pregunta1, Pregunta2, Pregunta3, Pregunta4;
+    public GameObject Pregunta1, Pregunta2, Pregunta3, Pregunta4, Inicio;
 
     //Array que contiene los grafcos de las preguntas
     GameObject[] TodasLasPreguntas;
@@ -19,7 +19,7 @@ public class Preg : MonoBehaviour
         TodasLasPreguntas[3] = Pregunta4;
 
         //apaga todas las Preguntas
-        for (int i = Juego.nivel; i < 4; i++)
+        for (int i = Juego.nivel-1; i < 4; i++)
         {
             TodasLasPreguntas[i].GetComponent<SpriteRenderer>().forceRenderingOff = true;
 
@@ -29,6 +29,13 @@ public class Preg : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //apaga inicio y prende el nivel 1
+        if (Juego.inicio > 0)
+        {
+            TodasLasPreguntas[0].GetComponent<SpriteRenderer>().forceRenderingOff = false;
+            Inicio.GetComponent<SpriteRenderer>().forceRenderingOff = true;
+        }
+
 
         if (Juego.pregCorrecta == true)
         {

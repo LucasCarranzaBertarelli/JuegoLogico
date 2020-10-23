@@ -43,7 +43,7 @@ public class Resp : MonoBehaviour
 
 
         //Apaga los graficos posteriores al nivel en que estoy
-        for (int i = Juego.nivel; i < 4; i++)
+        for (int i = Juego.nivel-1; i < 4; i++)
         {
             TodasLasRespuestasA[i].GetComponent<SpriteRenderer>().forceRenderingOff = true;
             TodasLasRespuestasB[i].GetComponent<SpriteRenderer>().forceRenderingOff = true;
@@ -54,8 +54,20 @@ public class Resp : MonoBehaviour
     }
     void Update() {
 
-            //Apaga los graficos incorrectos que voy apretando
-            if (Juego.eliminar == 1)
+        if (Juego.inicio == 1)
+        {
+            TodasLasRespuestasA[0].GetComponent<SpriteRenderer>().forceRenderingOff = false;
+            TodasLasRespuestasB[0].GetComponent<SpriteRenderer>().forceRenderingOff = false;
+            TodasLasRespuestasC[0].GetComponent<SpriteRenderer>().forceRenderingOff = false;
+            TodasLasRespuestasD[0].GetComponent<SpriteRenderer>().forceRenderingOff = false;
+            Juego.inicio = 2;
+
+        }
+
+
+
+        //Apaga los graficos incorrectos que voy apretando
+        if (Juego.eliminar == 1)
             {
             TodasLasRespuestasA[Juego.nivel-1].GetComponent<SpriteRenderer>().forceRenderingOff = true;
             }
