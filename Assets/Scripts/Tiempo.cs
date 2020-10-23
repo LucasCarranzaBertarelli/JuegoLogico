@@ -13,9 +13,7 @@ public class Tiempo : MonoBehaviour
        tiempoRespuesta -= Time.deltaTime;
         GetComponent<TextMesh>().text = "Tiempo: "+((int) tiempoRespuesta).ToString();
         if ((int)tiempoRespuesta == 0) tiempoRespuesta = 30;
-        if (Juego.pregCorrecta) tiempoRespuesta = 29;
-
-
+        if (Juego.respuesta!=0) tiempoRespuesta = 29;
 
     }
 }
