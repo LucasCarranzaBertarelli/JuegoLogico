@@ -59,7 +59,7 @@ public class Circulo : MonoBehaviour
 
             // sonido al girar rueda
 
-            if (zViejo != z && !GetComponent<AudioSource>().isPlaying) GetComponent<AudioSource>().Play();
+            if (!Juego.inicio&&zViejo != z && !GetComponent<AudioSource>().isPlaying) GetComponent<AudioSource>().Play();
 
             xViejo = x;
             yViejo = y;
