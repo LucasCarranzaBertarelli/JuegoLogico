@@ -7,6 +7,7 @@ public class Circulo : MonoBehaviour
     public static float zViejo = 0;
     static double xViejo = 175;
     static double yViejo = 389;
+    public GameObject help;
 
 
     // Update is called once per frame
@@ -18,8 +19,15 @@ public class Circulo : MonoBehaviour
         float control = z;
 
         //apaga el circulo durante el inicio
-        if (Juego.nivel ==0) GetComponent<SpriteRenderer>().forceRenderingOff = true;
-        else GetComponent<SpriteRenderer>().forceRenderingOff = false;
+        if (Juego.nivel == 0)
+        {
+            GetComponent<SpriteRenderer>().forceRenderingOff = true;
+            help.GetComponent<SpriteRenderer>().forceRenderingOff = true;
+
+        }
+        else { GetComponent<SpriteRenderer>().forceRenderingOff = false;
+            help.GetComponent<SpriteRenderer>().forceRenderingOff = false;
+        }
 
 
 
