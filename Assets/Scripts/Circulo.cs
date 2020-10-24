@@ -15,6 +15,7 @@ public class Circulo : MonoBehaviour
 
         double x = Input.mousePosition.x;
         double y = Input.mousePosition.y;
+        float control = z;
 
 
         //gira la rueda en funcion del mouse
@@ -46,6 +47,10 @@ public class Circulo : MonoBehaviour
             xViejo = x;
             yViejo = y;
             zViejo = z;
+        }
+        if (control != z && !GetComponent<AudioSource>().isPlaying) {
+            GetComponent<AudioSource>().Play();
+
         }
         
     }
