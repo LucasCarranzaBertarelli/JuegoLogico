@@ -12,6 +12,7 @@ public class Preg : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         TodasLasPreguntas = new GameObject[4];
         TodasLasPreguntas[0] = Pregunta1;
         TodasLasPreguntas[1] = Pregunta2;
@@ -19,7 +20,7 @@ public class Preg : MonoBehaviour
         TodasLasPreguntas[3] = Pregunta4;
 
         //apaga todas las Preguntas
-        for (int i = Juego.nivel-1; i < 4; i++)
+        for (int i = Juego.nivel; i < 4; i++)
         {
             TodasLasPreguntas[i].GetComponent<SpriteRenderer>().forceRenderingOff = true;
 
@@ -30,7 +31,8 @@ public class Preg : MonoBehaviour
     void Update()
     {
         //apaga inicio y prende el nivel 1
-        if (Juego.inicio > 0)
+
+        if (Juego.nivel == 1)
         {
             TodasLasPreguntas[0].GetComponent<SpriteRenderer>().forceRenderingOff = false;
             Inicio.GetComponent<SpriteRenderer>().forceRenderingOff = true;
@@ -58,6 +60,6 @@ public class Preg : MonoBehaviour
 
             }
             Juego.pregCorrecta = false;
-        }      
+        }
     }
 }

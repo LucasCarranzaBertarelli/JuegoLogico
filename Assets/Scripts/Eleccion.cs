@@ -8,11 +8,11 @@ using System;
 
 
 public static class Eleccion
-    {
+{
     public static int j = 0;
     public static int Respuesta = 0;
     static bool funciono = false;
-    public static int [] respuestaEliminada=new int[4] { 0, 0, 0,0 };
+    public static int[] respuestaEliminada = new int[4] { 0, 0, 0, 0 };
 
 
 
@@ -34,14 +34,16 @@ public static class Eleccion
                     if (Input.GetKeyDown("4")|| Input.GetKeyDown("d") || Input.GetMouseButtonDown(0) && positionX > Screen.width - Screen.width / 4 && positionX < Screen.width && positionY < Screen.height * .75 && positionY > Screen.height*.63)
                     Respuesta= 4;*/
 
-        
+
         //elije opciones en inicio
         if (Input.GetMouseButtonDown(0) && positionX > Screen.width * .6 && positionX < Screen.width * .8 && positionY > Screen.height * .55 && positionY < Screen.height * .65)
-            Juego.inicio = 1;
+        {
+            Juego.nivel = 1;
+        }
 
 
         //elige una opcion de acuerdo al angulo del circulo
-        if (Input.GetMouseButtonDown(0) && positionX > Screen.width / 2 && positionY < Screen.height * .4 && ((Circulo.z > 0 && Circulo.z < 90)||(Circulo.z>-360&&Circulo.z<-270)))
+        if (Input.GetMouseButtonDown(0) && positionX > Screen.width / 2 && positionY < Screen.height * .4 && ((Circulo.z > 0 && Circulo.z < 90) || (Circulo.z > -360 && Circulo.z < -270)))
             Respuesta = 1;
         if (Input.GetMouseButtonDown(0) && positionX > Screen.width / 2 && positionY < Screen.height * .4 && ((Circulo.z > 90 && Circulo.z < 180) || (Circulo.z > -270 && Circulo.z < -180)))
             Respuesta = 2;
@@ -51,7 +53,7 @@ public static class Eleccion
             Respuesta = 4;
 
 
-        
+
 
 
 
@@ -62,7 +64,7 @@ public static class Eleccion
             {
                 if (Juego.nivel == Juego.arrayLevel[i].nivel)
                 {
-                   funciono = false;
+                    funciono = false;
                     while (funciono == false)
                     {
                         System.Random rnd = new System.Random();
@@ -74,15 +76,15 @@ public static class Eleccion
                             if (respuestaErronea == respuestaEliminada[j])
                                 break;
 
-                            if (respuestaErronea != Juego.arrayLevel[i].respuesta && respuestaEliminada[j]==0)
+                            if (respuestaErronea != Juego.arrayLevel[i].respuesta && respuestaEliminada[j] == 0)
                             {
                                 Respuesta = respuestaErronea;
                                 funciono = true;
                                 break;
-                            }                     
+                            }
                         }
                         if (respuestaEliminada[2] != 0)
-                        funciono = true;
+                            funciono = true;
                     }
                 }
             }
@@ -98,8 +100,8 @@ public static class Eleccion
             }
         }
         //se asegura que la no haya respuesta mientras estamos en inicio
-        if (Juego.inicio == 0) Respuesta = 0;
+        if (Juego.nivel==0) Respuesta = 0;
 
         return Respuesta;
-        }
     }
+}

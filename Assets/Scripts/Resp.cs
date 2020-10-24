@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Resp : MonoBehaviour
 {
-    
+
     public GameObject Resp1A, Resp1B, Resp1C, Resp1D, Resp2A, Resp2B, Resp2C, Resp2D;
     public GameObject Resp3A, Resp3B, Resp3C, Resp3D, Resp4A, Resp4B, Resp4C, Resp4D;
 
@@ -43,7 +43,7 @@ public class Resp : MonoBehaviour
 
 
         //Apaga los graficos posteriores al nivel en que estoy
-        for (int i = Juego.nivel-1; i < 4; i++)
+        for (int i = Juego.nivel; i < 4; i++)
         {
             TodasLasRespuestasA[i].GetComponent<SpriteRenderer>().forceRenderingOff = true;
             TodasLasRespuestasB[i].GetComponent<SpriteRenderer>().forceRenderingOff = true;
@@ -52,40 +52,40 @@ public class Resp : MonoBehaviour
         }
 
     }
-    void Update() {
+    void Update()
+    {
 
-        if (Juego.inicio == 1)
+        if (Juego.nivel == 1&& Juego.inicio)
         {
             TodasLasRespuestasA[0].GetComponent<SpriteRenderer>().forceRenderingOff = false;
             TodasLasRespuestasB[0].GetComponent<SpriteRenderer>().forceRenderingOff = false;
             TodasLasRespuestasC[0].GetComponent<SpriteRenderer>().forceRenderingOff = false;
             TodasLasRespuestasD[0].GetComponent<SpriteRenderer>().forceRenderingOff = false;
-            Juego.inicio = 2;
-
+            Juego.inicio = false;
         }
 
 
 
         //Apaga los graficos incorrectos que voy apretando
         if (Juego.eliminar == 1)
-            {
-            TodasLasRespuestasA[Juego.nivel-1].GetComponent<SpriteRenderer>().forceRenderingOff = true;
-            }
-            if (Juego.eliminar == 2)
-            {
+        {
+            TodasLasRespuestasA[Juego.nivel - 1].GetComponent<SpriteRenderer>().forceRenderingOff = true;
+        }
+        if (Juego.eliminar == 2)
+        {
             TodasLasRespuestasB[Juego.nivel - 1].GetComponent<SpriteRenderer>().forceRenderingOff = true;
-            }
-            if (Juego.eliminar == 3)
-            {
+        }
+        if (Juego.eliminar == 3)
+        {
             TodasLasRespuestasC[Juego.nivel - 1].GetComponent<SpriteRenderer>().forceRenderingOff = true;
-            }
-            if (Juego.eliminar == 4)
-            {
+        }
+        if (Juego.eliminar == 4)
+        {
             TodasLasRespuestasD[Juego.nivel - 1].GetComponent<SpriteRenderer>().forceRenderingOff = true;
-            }
+        }
 
 
-        if (Juego.respCorrecta==true)
+        if (Juego.respCorrecta == true)
         {
             //Apaga los graficos del nivel que pase
             TodasLasRespuestasA[Juego.nivel - 2].GetComponent<SpriteRenderer>().forceRenderingOff = true;

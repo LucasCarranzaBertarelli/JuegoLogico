@@ -4,13 +4,13 @@ using UnityEngine;
 public class Circulo : MonoBehaviour
 {
     public static float z;
-    public static float zViejo=0;
+    public static float zViejo = 0;
     static double xViejo = 175;
     static double yViejo = 389;
-    
-   
+
+
     // Update is called once per frame
-   public void Update()
+    public void Update()
     {
 
         double x = Input.mousePosition.x;
@@ -18,7 +18,7 @@ public class Circulo : MonoBehaviour
         float control = z;
 
         //apaga el circulo durante el inicio
-        if (Juego.inicio < 1) GetComponent<SpriteRenderer>().forceRenderingOff = true;
+        if (Juego.nivel ==0) GetComponent<SpriteRenderer>().forceRenderingOff = true;
         else GetComponent<SpriteRenderer>().forceRenderingOff = false;
 
 
@@ -41,7 +41,7 @@ public class Circulo : MonoBehaviour
             {
                 z += Time.deltaTime * 60;
             }
-            if (zViejo>z)
+            if (zViejo > z)
                 z -= Time.deltaTime * 60;
 
             transform.rotation = Quaternion.Euler(0, 0, z);
@@ -53,11 +53,12 @@ public class Circulo : MonoBehaviour
             yViejo = y;
             zViejo = z;
         }
-        if (control != z && !GetComponent<AudioSource>().isPlaying) {
+      /*  if (control != z && !GetComponent<AudioSource>().isPlaying)
+        {
             GetComponent<AudioSource>().Play();
 
-        }
-        
+        }*/
+
     }
-    
+
 }
