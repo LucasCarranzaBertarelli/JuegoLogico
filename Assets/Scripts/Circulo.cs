@@ -57,16 +57,16 @@ public class Circulo : MonoBehaviour
             if (z > 360) z = 0;
             if (z < -360) z = 0;
 
+            // sonido al girar rueda
+
+            if (zViejo != z && !GetComponent<AudioSource>().isPlaying) GetComponent<AudioSource>().Play();
+
             xViejo = x;
             yViejo = y;
             zViejo = z;
-        }
-      /*  if (control != z && !GetComponent<AudioSource>().isPlaying)
-        {
-            GetComponent<AudioSource>().Play();
-
-        }*/
+        
+      
 
     }
-
+}
 }
