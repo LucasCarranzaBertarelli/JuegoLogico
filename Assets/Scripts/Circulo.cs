@@ -19,13 +19,15 @@ public class Circulo : MonoBehaviour
         float control = z;
 
         //apaga el circulo durante el inicio
-        if (Juego.nivel == 0)
+        if (Juego.nivel < 1)
         {
             GetComponent<SpriteRenderer>().forceRenderingOff = true;
             help.GetComponent<SpriteRenderer>().forceRenderingOff = true;
 
         }
-        else { GetComponent<SpriteRenderer>().forceRenderingOff = false;
+        else
+        {
+            GetComponent<SpriteRenderer>().forceRenderingOff = false;
             help.GetComponent<SpriteRenderer>().forceRenderingOff = false;
         }
 
@@ -59,14 +61,14 @@ public class Circulo : MonoBehaviour
 
             // sonido al girar rueda
 
-            if (!Juego.inicio&&zViejo != z && !GetComponent<AudioSource>().isPlaying) GetComponent<AudioSource>().Play();
+            if (!Juego.inicio && zViejo != z && !GetComponent<AudioSource>().isPlaying) GetComponent<AudioSource>().Play();
 
             xViejo = x;
             yViejo = y;
             zViejo = z;
-        
-      
 
+
+
+        }
     }
-}
 }

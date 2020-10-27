@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Preg : MonoBehaviour
 {
-    public GameObject Pregunta1, Pregunta2, Pregunta3, Pregunta4, Inicio;
+    public GameObject Pregunta1, Pregunta2, Pregunta3, Pregunta4, Inicio, Options;
 
     //Array que contiene los grafcos de las preguntas
     GameObject[] TodasLasPreguntas;
@@ -20,16 +20,28 @@ public class Preg : MonoBehaviour
         TodasLasPreguntas[3] = Pregunta4;
 
         //apaga todas las Preguntas
-        for (int i = Juego.nivel; i < 4; i++)
-        {
-            TodasLasPreguntas[i].GetComponent<SpriteRenderer>().forceRenderingOff = true;
-
-        }
+        /* for (int i = Juego.nivel; i < 4; i++)
+         {
+             TodasLasPreguntas[i].GetComponent<SpriteRenderer>().forceRenderingOff = true;
+             Options.GetComponent<SpriteRenderer>().forceRenderingOff = true;
+         }*/
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        //apaga todas las Preguntas
+        if (Juego.nivel > -1)
+        {
+            for (int i = Juego.nivel; i < 4; i++)
+            {
+                TodasLasPreguntas[i].GetComponent<SpriteRenderer>().forceRenderingOff = true;
+                Options.GetComponent<SpriteRenderer>().forceRenderingOff = true;
+            }
+        }
+
+
         //apaga inicio y prende el nivel 1
 
         if (Juego.nivel == 1)
@@ -37,6 +49,18 @@ public class Preg : MonoBehaviour
             TodasLasPreguntas[0].GetComponent<SpriteRenderer>().forceRenderingOff = false;
             Inicio.GetComponent<SpriteRenderer>().forceRenderingOff = true;
         }
+        if (Juego.nivel == -1)
+        {
+            Options.GetComponent<SpriteRenderer>().forceRenderingOff = false;
+            Inicio.GetComponent<SpriteRenderer>().forceRenderingOff = true;
+        }
+        //esto prende el inicio (nivel 0)
+        if (Juego.nivel == 0)
+        {
+            Inicio.GetComponent<SpriteRenderer>().forceRenderingOff = false;
+        }
+
+
 
 
         if (Juego.pregCorrecta == true)
