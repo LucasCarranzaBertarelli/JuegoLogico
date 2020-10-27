@@ -44,6 +44,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 102
       Script: {instanceID: 0}
     - Class: 104
@@ -435,7 +439,7 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
-      Hash: 56b9f58f02c95403a9ad1d2216104052
+      Hash: 445c0a71c3ae4fe290a1707594562688
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Preg
@@ -573,7 +577,7 @@ ScriptsOnlyBuild:
     className: Slider
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 905f740d1ee6c553d0e8b054985bee7f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Circulo
