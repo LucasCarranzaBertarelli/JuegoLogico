@@ -60,6 +60,7 @@
     <Compile Include="Assets\Scripts\DestroyOnSoundEnd.cs" />
     <Compile Include="Assets\Scripts\Juego.cs" />
     <Compile Include="Assets\Scripts\Level.cs" />
+    <Compile Include="Assets\Scripts\Hint.cs" />
     <Compile Include="Assets\Scripts\Preg.cs" />
     <Compile Include="Assets\Scripts\Tiempo.cs" />
     <Compile Include="Assets\Scripts\Resp.cs" />
