@@ -55,7 +55,7 @@ public class Resp : MonoBehaviour
     void Update()
     {
 
-        if (Juego.nivel == 1&& Juego.inicio)
+        if (Juego.nivel == 1 && Juego.inicio)
         {
             TodasLasRespuestasA[0].GetComponent<SpriteRenderer>().forceRenderingOff = false;
             TodasLasRespuestasB[0].GetComponent<SpriteRenderer>().forceRenderingOff = false;
