@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.PackageManager.Requests;
 using UnityEngine;
 
 public class Preg : MonoBehaviour
 {
-    public GameObject Pregunta1, Pregunta2, Pregunta3, Pregunta4, Inicio, Options;
+    public GameObject Pregunta1, Pregunta2, Pregunta3, Pregunta4, Inicio, Options,Dibujo;
+    public static float tiempo;
 
     //Array que contiene los grafcos de las preguntas
     GameObject[] TodasLasPreguntas;
@@ -42,13 +44,22 @@ public class Preg : MonoBehaviour
         }
 
 
-        //apaga inicio y prende el nivel 1
-
+        //apaga inicio y prende la advertencia de 90% al usuario
         if (Juego.nivel == 1)
         {
-            TodasLasPreguntas[0].GetComponent<SpriteRenderer>().forceRenderingOff = false;
+            Dibujo.GetComponent<SpriteRenderer>().forceRenderingOff = false;
             Inicio.GetComponent<SpriteRenderer>().forceRenderingOff = true;
+            tiempo += Time.deltaTime * 1;
         }
+
+        //apaga inicio y prende el nivel 1
+        if (Juego.nivel == 1 && tiempo > 5)
+        {
+            Dibujo.GetComponent<SpriteRenderer>().forceRenderingOff = true;
+            TodasLasPreguntas[0].GetComponent<SpriteRenderer>().forceRenderingOff = false;
+        }
+
+
         if (Juego.nivel == -1)
         {
             Options.GetComponent<SpriteRenderer>().forceRenderingOff = false;

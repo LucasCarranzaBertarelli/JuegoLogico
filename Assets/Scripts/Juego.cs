@@ -14,6 +14,7 @@ public class Juego : MonoBehaviour
     public int nivelRespuesta = 10;
     public static bool pregCorrecta;
     public static bool respCorrecta;
+    public GameObject Dibujo;
 
     public static Level[] arrayLevel;
     public static int eliminar;
@@ -53,6 +54,9 @@ public class Juego : MonoBehaviour
         arrayLevel[1] = Level2;
         arrayLevel[2] = Level3;
         arrayLevel[3] = Level4;
+
+        Dibujo.GetComponent<SpriteRenderer>().forceRenderingOff = true;
+
 
     }
 

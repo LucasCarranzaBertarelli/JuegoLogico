@@ -19,7 +19,7 @@ public class Circulo : MonoBehaviour
         float control = z;
 
         //apaga el circulo durante el inicio
-        if (Juego.nivel < 1)
+        if (Juego.nivel < 1||Preg.tiempo<5)
         {
             GetComponent<SpriteRenderer>().forceRenderingOff = true;
             help.GetComponent<SpriteRenderer>().forceRenderingOff = true;

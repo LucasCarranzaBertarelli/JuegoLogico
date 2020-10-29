@@ -18,7 +18,7 @@ public class Tiempo : MonoBehaviour
         if (Juego.respuesta != 0) tiempoRespuesta = 29;
 
         //hace que no empiece el tiempo hasta que salga del inicio
-        if (Juego.nivel < 1)
+        if (Juego.nivel < 1||Preg.tiempo<5)
         {
             GetComponent<TextMesh>().text = "";
             tiempoRespuesta = 29;
