@@ -82,8 +82,10 @@ public class Juego : MonoBehaviour
             nivel++;
             respCorrecta = true;
             pregCorrecta = true;
+            //suma credito cuando pasa de nivel
+            Tiempo.vidas += 4;
         }
-        else
+        else 
         {
             eliminar = respuesta;
 
