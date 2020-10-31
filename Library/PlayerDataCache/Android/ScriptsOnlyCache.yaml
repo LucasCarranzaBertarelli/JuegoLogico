@@ -2,6 +2,7 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - Circulo
+    - Hint
     - Juego
     - Preg
     - Resp
@@ -42,7 +43,13 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 61
+      Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
       Script: {instanceID: 0}
     - Class: 102
       Script: {instanceID: 0}
@@ -51,13 +58,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12480}
     - Class: 114
-      Script: {instanceID: 14316}
+      Script: {instanceID: 13830}
     - Class: 114
-      Script: {instanceID: 14458}
+      Script: {instanceID: 14318}
     - Class: 114
-      Script: {instanceID: 14538}
+      Script: {instanceID: 14460}
     - Class: 114
-      Script: {instanceID: 15208}
+      Script: {instanceID: 14540}
+    - Class: 114
+      Script: {instanceID: 15210}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -97,6 +106,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_Dropdown
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Eleccion
   - hash:
       serializedVersion: 2
       Hash: e7a73f5f78ba6445195ec23b74a1ce2d
@@ -213,7 +228,7 @@ ScriptsOnlyBuild:
     className: PhysicsRaycaster
   - hash:
       serializedVersion: 2
-      Hash: 85a63da6c89ed58e135d913a19b2c60d
+      Hash: aeace0a5f2b6fd307165b8f993b88a33
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Juego
@@ -369,6 +384,12 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Hint
+  - hash:
+      serializedVersion: 2
       Hash: 3164bc883ff663a5cdb32d1ef7e7c0c5
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -435,7 +456,7 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
-      Hash: 56b9f58f02c95403a9ad1d2216104052
+      Hash: 4e6d76da79e169ee45c1af839709dc2e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Preg
@@ -447,7 +468,7 @@ ScriptsOnlyBuild:
     className: TextMeshProUGUI
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 2c2bddacb0eee664e85f977fc5eb847d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Tiempo
@@ -573,7 +594,7 @@ ScriptsOnlyBuild:
     className: Slider
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 905f740d1ee6c553d0e8b054985bee7f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Circulo
