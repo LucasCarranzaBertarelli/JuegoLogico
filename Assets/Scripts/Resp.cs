@@ -54,6 +54,7 @@ public class Resp : MonoBehaviour
     }
     void Update()
     {
+        Debug.Log("cambio Tota");
 
         if (Juego.nivel == 1 && Juego.inicio&& Preg.tiempo>5)
         {
