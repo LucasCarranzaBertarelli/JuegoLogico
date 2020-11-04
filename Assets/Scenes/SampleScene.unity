@@ -189,7 +189,7 @@ SpriteRenderer:
   m_Size: {x: 0.77, y: 0.7}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &36967491
@@ -778,7 +778,7 @@ SpriteRenderer:
   m_Size: {x: 0.77, y: 0.72}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &862307181
@@ -928,7 +928,7 @@ SpriteRenderer:
   m_Size: {x: 5.9, y: 12.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &869393789
@@ -1421,7 +1421,7 @@ MonoBehaviour:
   Pregunta2: {fileID: 1703049858}
   Pregunta3: {fileID: 1368749231}
   Pregunta4: {fileID: 862307181}
-  Inicio: {fileID: 1864679690}
+  Inicio: {fileID: 1711554055}
   Options: {fileID: 869393787}
   Dibujo: {fileID: 1849484870}
 --- !u!4 &1283369677
@@ -2053,7 +2053,7 @@ SpriteRenderer:
   m_Size: {x: 0.74, y: 0.62}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1862325832
@@ -2135,7 +2135,7 @@ SpriteRenderer:
   m_Size: {x: 0.75, y: 0.66}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1864679690
@@ -2634,7 +2634,7 @@ SpriteRenderer:
   m_Size: {x: 0.72, y: 0.74}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &2067749266
@@ -2716,7 +2716,7 @@ SpriteRenderer:
   m_Size: {x: 0.72, y: 0.6}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &2074538454
@@ -2784,7 +2784,7 @@ SpriteRenderer:
   m_Size: {x: 0.74, y: 0.72}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &2074538456
