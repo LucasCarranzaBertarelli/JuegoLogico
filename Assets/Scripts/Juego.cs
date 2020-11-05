@@ -14,6 +14,7 @@ public class Juego : MonoBehaviour
     public int nivelRespuesta = 10;
     public static bool pregCorrecta;
     public static bool respCorrecta;
+    public GameObject Dibujo;
 
     public static Level[] arrayLevel;
     public static int eliminar;
@@ -54,6 +55,9 @@ public class Juego : MonoBehaviour
         arrayLevel[2] = Level3;
         arrayLevel[3] = Level4;
 
+        Dibujo.GetComponent<SpriteRenderer>().forceRenderingOff = true;
+
+
     }
 
     // Update is called once per frame
@@ -78,8 +82,10 @@ public class Juego : MonoBehaviour
             nivel++;
             respCorrecta = true;
             pregCorrecta = true;
+            //suma credito cuando pasa de nivel
+            Tiempo.vidas += 4;
         }
-        else
+        else 
         {
             eliminar = respuesta;
 

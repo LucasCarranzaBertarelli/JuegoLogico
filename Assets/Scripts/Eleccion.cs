@@ -14,11 +14,14 @@ public class Eleccion: MonoBehaviour
     public static int Respuesta = 0;
     static bool funciono = false;
     public static int[] respuestaEliminada = new int[4] { 0, 0, 0, 0 };
-
+    
 
 
     public static int Election()
     {
+        //paraCompenzar es una variable que le suma uno si eligo una ayuda encambio de arriesgarme (para que sea menos gravoso el error)
+        int paraCompenzar = 0;
+
         Respuesta = 0;
         var positionX = Input.mousePosition.x;
         var positionY = Input.mousePosition.y;
@@ -102,6 +105,7 @@ public class Eleccion: MonoBehaviour
                 }
             }
             Hint = false;
+            paraCompenzar = 1;
         }
 
         //RespuestaEliminada guarda cada respuesta que sea distinta a la anterior
@@ -110,8 +114,11 @@ public class Eleccion: MonoBehaviour
             if (Respuesta != 0 && respuestaEliminada[i] == 0 && respuestaEliminada[0] != Respuesta && respuestaEliminada[1] != Respuesta && respuestaEliminada[2] != Respuesta && respuestaEliminada[3] != Respuesta)
             {
                 respuestaEliminada[i] = Respuesta;
+                //resta credito con cualquier respuesta
+                Tiempo.vidas = Tiempo.vidas+paraCompenzar-2;
                 break;
             }
+
         }
         //se asegura que la no haya respuesta mientras estamos en inicio
         if (Juego.nivel == 0) Respuesta = 0;
