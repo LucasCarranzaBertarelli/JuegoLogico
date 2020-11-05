@@ -1421,7 +1421,7 @@ MonoBehaviour:
   Pregunta2: {fileID: 1703049858}
   Pregunta3: {fileID: 1368749231}
   Pregunta4: {fileID: 862307181}
-  Inicio: {fileID: 1711554055}
+  Inicio: {fileID: 1864679690}
   Options: {fileID: 869393787}
   Dibujo: {fileID: 1849484870}
 --- !u!4 &1283369677
